@@ -1,0 +1,47 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zs.it.testmaterialdesign.TabLayoutActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--默认的AppBarLayout是垂直方向的，它的作用是把AppBarLayout包裹的内容都作为AppBar
+            此处将Toolbar 和Tablayout的组合部分共同构成 AppBar的效果。
+            注意： AppBarLayout必须作为Toolbar的父布局容器;
+            AppBarLayout是支持手势滑动效果的，不过的跟CoordinatorLayout配合使用;-->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"/>
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="#009688"
+                app:tabIndicatorHeight="2dp"
+                app:tabGravity="center"
+                app:tabMode="scrollable"
+                app:tabBackground="@android:color/holo_purple"
+                app:tabTextColor="#ff5252"
+                app:tabSelectedTextColor="#212121"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appbarlayout"/>
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

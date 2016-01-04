@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- provide a different drawable for each state-->
+    <item android:id="@+id/pressed" android:drawable="@mipmap/ic_launcher"
+        android:state_pressed="true"/>
+    <item android:id="@+id/focused" android:drawable="@mipmap/ic_brightness_medium_white_36dp"
+        android:state_focused="true"/>
+    <item android:id="@+id/def"
+        android:drawable="@mipmap/ic_bg"/>
+
+    <!-- specify a transition -->
+    <transition android:fromId="@+id/def" android:toId="@+id/pressed">
+        <animation-list>
+            <item android:duration="15" android:drawable="@drawable/ripple_drawable"/>
+            <item android:duration="15" android:drawable="@drawable/state_list_anim"/>
+        </animation-list>
+    </transition>
+</selector>

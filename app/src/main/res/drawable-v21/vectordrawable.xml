@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    一个矢量图使用<vector>元素,放在res/drawable/下。
+    一个可动的矢量图使用<animated-vector>元素，放在res/drawable/下。
+    一个或更多个动画对象使用<objectAnimator>元素，放在res/anim/下。
+    可动矢量图可以使用<group>和<path>元素。<group>元素定义一系列路径或者子组，<path>元素定义可绘图的路径。
+    当你定义了一个想要作用动画的矢量可绘制图，使用android:name属性给每个group和path指定一个唯一的名字，这样你可以从动画的定义中找到他们
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="64dp"
+    android:width="64dp"
+    android:viewportHeight="600"
+    android:viewportWidth="600">
+    <group
+        android:name="rotationGroup"
+        android:pivotX="300.0"
+        android:pivotY="300.0"
+        android:rotation="45.0">
+        <path
+            android:name="v"
+            android:fillColor="#000000"
+            android:pathData="M300,70 l 0,-70 70,70 0,0 -70,70z" />
+    </group>
+</vector>

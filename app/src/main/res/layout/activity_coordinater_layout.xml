@@ -1,0 +1,78 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zs.it.testmaterialdesign.CoordinaterLayoutActivity">
+
+    <!-- 为了使得Toolbar有滑动效果，必须做到如下三点：
+        CoordinatorLayout必须作为整个布局的父布局容器。
+        给需要滑动的组件设置 app:layout_scrollFlags=”scroll|enterAlways” 属性。
+        给你的可滑动的组件，也就是RecyclerView 或者 NestedScrollView、ListView，ScrollView等设置如下属性：
+         app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+
+
+        <!--默认的AppBarLayout是垂直方向的，它的作用是把AppBarLayout包裹的内容都作为AppBar
+            此处将Toolbar 和Tablayout的组合部分共同构成 AppBar的效果。
+            注意： AppBarLayout必须作为Toolbar的父布局容器;
+            AppBarLayout是支持手势滑动效果的，不过的跟CoordinatorLayout配合使用;-->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--设置的layout_scrollFlags有如下几种选项：
+                scroll: 所有想滚动出屏幕的view都需要设置这个flag- 没有设置这个flag的view将被固定在屏幕顶部。
+                enterAlways: 这个flag让任意向下的滚动都会导致该view变为可见，启用快速“返回模式”。
+                enterAlwaysCollapsed: 当你的视图已经设置minHeight属性又使用此标志时，你的视图只能已最小高度进入，只有当滚动视图到达顶部时才扩大到完整高度。
+                exitUntilCollapsed: 滚动退出屏幕，最后折叠在顶端。-->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"/>
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="#009688"
+                app:tabIndicatorHeight="2dp"
+                app:tabGravity="fill"
+                app:tabMode="scrollable"
+                app:tabBackground="@android:color/holo_purple"
+                app:tabTextColor="#ff5252"
+                app:tabSelectedTextColor="#212121"/>
+
+            <ImageView
+                android:id="@+id/iv_transition"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher"
+                android:transitionName="@string/transition_name1"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+    <!--ecyclerView并没有支持divider这样的属性;
+        可以在item不居中添加分割线；
+        谷歌官方也提供了ListDecoration来绘制分割线，实现该类即可
+        -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#ffff0000"
+            android:dividerHeight="8dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_brightness_medium_white_36dp"
+            android:layout_gravity="bottom|end"/>
+
+    <!--</RelativeLayout>-->
+
+</android.support.design.widget.CoordinatorLayout>

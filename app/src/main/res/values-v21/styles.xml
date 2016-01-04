@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <style name="AppThemeBase" parent="Theme.AppCompat.Light.NoActionBar">
+
+                <!-- 底部导航栏颜色 -->
+                <item name="android:navigationBarColor">#4876FF</item>
+                <!--ripple drawable 水波纹颜色-->
+                <item name="android:colorControlHighlight">#ff9911</item>
+                <!--设置checkbox等控件的选中颜色-->
+                <item name="android:colorAccent">#aa33aa</item>
+
+
+                <!-- 开启窗口内内容过渡效果 -->
+                <!--<item name="android:windowContentTransitions">true</item>-->
+                <!-- specify enter and exit transitions -->
+                <!--<item name="android:windowEnterTransition">@transition/explode</item>-->
+                <!--<item name="android:windowExitTransition">@transition/explode</item>-->
+
+                <!-- specify shared element transitions -->
+                <!--<item name="android:windowSharedElementEnterTransition">@transition/change_image_transform</item>-->
+                <!--<item name="android:windowSharedElementExitTransition">@transition/change_image_transform</item>-->
+        </style>
+</resources>

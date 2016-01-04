@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zs.it.testmaterialdesign" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="设计"
+            android:logo="@mipmap/ic_launcher" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TabLayoutActivity"
+            android:label="@string/title_activity_tab_layout" >
+        </activity>
+        <activity
+            android:name=".CoordinaterLayoutActivity"
+            android:label="@string/title_activity_coordinater_layout" >
+        </activity>
+        <activity
+            android:name=".CollapsingToolbarLayoutActivity"
+            android:label="@string/title_activity_collapsing_toolbar_layout" >
+        </activity>
+        <activity
+            android:name=".TestAnimationActivity"
+            android:label="@string/title_activity_test_animation" >
+        </activity>
+        <activity
+            android:name=".MuchSharedTransitionActivity"
+            android:label="@string/title_activity_much_shared_transition" >
+        </activity>
+        <activity
+            android:name=".ActiveSharedTransitionActivity"
+            android:label="@string/title_activity_active_shared_transition" >
+        </activity>
+        <activity
+            android:name=".TestActivityCompactActivity"
+            android:label="@string/title_activity_test_activity_compact" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">TestMaterialDesign</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <array name="action_list">
+        <item name="test1">test1</item>
+        <item name="test2">test2</item>
+        <item name="test3">test3</item>
+        <item name="test4">test4</item>
+    </array>
+    <string name="title_activity_tab_layout">TabLayoutActivity</string>
+    <string name="title_activity_coordinater_layout">CoordinaterLayoutActivity</string>
+    <string name="title_activity_collapsing_toolbar_layout">CollapsingToolbarLayoutActivity</string>
+
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+    <string name="title_activity_test_animation">TestAnimationActivity</string>
+    <string name="transition_name1">transition_name1</string>
+    <string name="transition_name2">transition_name2</string>
+    <string name="transition_name3">transition_name3</string>
+    <string name="transition_name4">transition_name4</string>
+    <string name="transition_name5">transition_name5</string>
+    <string name="transition_name6">transition_name6</string>
+    <string name="title_activity_much_shared_transition">MuchSharedTransitionActivity</string>
+    <string name="title_activity_active_shared_transition">ActiveSharedTransitionActivity</string>
+    <string name="title_activity_test_activity_compact">TestActivityCompactActivity</string>
+</resources>

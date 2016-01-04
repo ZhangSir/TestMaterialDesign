@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.zs.it.testmaterialdesign.TestAnimationActivity">
+
+    <ImageView
+        android:id="@+id/iv_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_bg"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btn_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/iv_anim"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/white"
+        android:text="隐藏"
+        android:background="@drawable/ripple_drawable"/>
+
+
+    <ImageView
+        android:id="@+id/iv_transition1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@id/btn_control"
+        android:transitionName="@string/transition_name1"/>
+
+    <ImageView
+        android:id="@+id/iv_transition2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@id/btn_control"
+        android:layout_toRightOf="@id/iv_transition1"
+        android:transitionName="@string/transition_name2"/>
+
+    <TextView
+        android:id="@+id/tv_transition3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_control"
+        android:layout_toRightOf="@id/iv_transition2"
+        android:layout_marginTop="16dp"
+        android:text="多个共享视图"
+        android:transitionName="@string/transition_name3"/>
+
+    <ImageView
+        android:id="@+id/iv_transition4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@id/btn_control"
+        android:layout_toRightOf="@id/tv_transition3"
+        android:transitionName="@string/transition_name4"/>
+
+    <ImageView
+        android:id="@+id/iv_transition5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@id/btn_control"
+        android:layout_toRightOf="@id/iv_transition4"/>
+
+    <ImageView
+        android:id="@+id/iv_transition6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@id/btn_control"
+        android:layout_toRightOf="@id/iv_transition5"/>
+
+    <Button
+        android:id="@+id/btn_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_transition1"
+        android:text="一个共享视图"/>
+    <Button
+        android:id="@+id/btn_much"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_transition1"
+        android:layout_toRightOf="@id/btn_one"
+        android:text="多个共享视图"/>
+    <Button
+        android:id="@+id/btn_active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_transition1"
+        android:layout_toRightOf="@id/btn_much"
+        android:text="动态添加共享视图"/>
+
+
+    <ImageView
+        android:id="@+id/iv_compact"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_below="@id/btn_much"
+        android:src="@mipmap/ic_bg"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

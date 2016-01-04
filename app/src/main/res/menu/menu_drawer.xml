@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/ic_brightness_medium_white_36dp"
+            android:title="Home"/>
+        <item
+            android:id="@+id/nav_messages"
+            android:icon="@mipmap/ic_brightness_medium_white_36dp"
+            android:title="Messages"/>
+    </group>
+
+            <group
+                android:title="group items"
+                android:checkableBehavior="single">
+                <menu>
+                    <item
+                        android:id="@+id/nav_friends"
+                        android:icon="@mipmap/ic_brightness_medium_white_36dp"
+                        android:title="Friends"/>
+                    <item
+                        android:id="@+id/nav_discussion"
+                        android:icon="@mipmap/ic_brightness_medium_white_36dp"
+                        android:title="Discussion"/>
+                </menu>
+            </group>
+
+    <item android:title="Sub items">
+        <menu>
+            <item
+                android:checkable="true"
+                android:icon="@mipmap/ic_brightness_medium_white_36dp"
+                android:title="Sub item 1"/>
+            <item
+                android:checkable="true"
+                android:icon="@mipmap/ic_brightness_medium_white_36dp"
+                android:title="Sub item 2"/>
+        </menu>
+    </item>
+
+</menu>
