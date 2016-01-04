@@ -1,0 +1,2 @@
+# TestMaterialDesign
+该测试程序是用来测试和学习Android Material Design设计风格的；主要了解了android support design包中的组件CollapsingToolBarLayout、CoordinatorLayout、RecycleView、Snackbar、FloatingActionButton以及新的动画如Activity转场动画ActivityOptions等
